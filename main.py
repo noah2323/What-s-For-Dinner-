@@ -15,10 +15,9 @@ Config.set('graphics', 'multisamples', '0')
 
 restList = [] #List that will hold the restuarants
 class MyGrid(Widget):
-    #name = ObjectProperty(None)
+    
     restaurant = ObjectProperty(None)
     choice = ObjectProperty(None)
-    #number = ObjectProperty(None)
 
     def addrest(self):
         restList.append(self.restaurant.text)
@@ -28,7 +27,6 @@ class MyGrid(Widget):
 
     def btn(self):
         self.choice.text = random.choice(restList) #Chooses a random element to eat at.
-
 
 # Main Code
 class MyApp(App): #Must be same name lowercase for the kv style file
