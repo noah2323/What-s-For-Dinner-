@@ -1,0 +1,52 @@
+<Button>
+    font_size: 50
+    color: 0,0,0
+    background_color: (255,0,0)
+
+<Label>
+    size: self.texture_size
+
+<MyGrid>
+
+    restaurant: restaurant
+    choice:choice
+
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        GridLayout:
+            cols:1
+
+            Label:
+                text: "Welcome to What's For Dinner!"
+
+            Label:
+                text: "Do not hit Done until you have enterned at least one restaurant."
+
+            
+
+        GridLayout:
+            cols:1
+            Label:
+                text: "Type in a place that you feel like eating at. Hit the button below to add a place."
+
+            TextInput:
+                id: restaurant
+                multiline: False
+
+            Button:
+                text: "Add Another"
+                on_press: root.addrest()
+
+            Label:
+                text: "The restaurant you will be eating at is..."
+
+            TextInput:
+                id:choice
+                multiline: False
+
+            Button:
+                text: "Done"
+                on_press: root.btn()
+    
